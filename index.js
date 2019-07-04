@@ -1,2 +1,3 @@
 const app = require('./lib/app');
-app();
+
+app.start(process.env.PORT || 3000);

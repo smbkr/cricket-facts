@@ -9,9 +9,6 @@
   "author": "Stuart Baker <stuart@smbkr.xyz>",
   "license": "None",
   "dependencies": {
-    "koa": "^2.7.0"
-  },
-  "devDependencies": {
-    "mocha": "^6.1.4"
+    "@slack/bolt": "^1.2.0"
   }
 }
