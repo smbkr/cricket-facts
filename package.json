@@ -1,0 +1,14 @@
+{
+  "name": "cricket-facts",
+  "version": "1.0.0",
+  "description": "A Slack bot that delivers facts about crickets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stuart Baker <stuart@smbkr.xyz>",
+  "license": "None",
+  "dependencies": {
+    "koa": "^2.7.0"
+  }
+}
