@@ -4,7 +4,7 @@
   "description": "A Slack bot that delivers facts about crickets",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run lint && tap",
     "lint": "eslint ."
   },
   "author": "Stuart Baker <stuart@smbkr.xyz>",
@@ -17,6 +17,7 @@
     "eslint": "^5.16.0",
     "eslint-config-airbnb-base": "^13.2.0",
     "eslint-plugin-import": "^2.18.0",
-    "mocha": "^6.1.4"
+    "supertest": "^4.0.2",
+    "tap": "^14.4.1"
   }
 }
