@@ -1,30 +1,21 @@
-const supertest = require('supertest');
 const tap = require('tap');
-const app = require('../lib/app');
 const facts = require('../lib/facts.json');
 
-let server;
-let request;
-tap.beforeEach((done) => {
-  server = app.listen();
-  request = supertest(server);
-  done();
-});
+function findDuplicates(array) {
+  const result = [];
+  array.forEach((element, index) => {
+    if (array.indexOf(element, index + 1) > -1) {
+      if (result.indexOf(element) === -1) {
+        result.push(element);
+      }
+    }
+  });
 
-tap.afterEach((done) => {
-  server.close();
-  done();
-});
+  return result;
+}
 
-tap.test('Getting a fact', (t) => {
-  request
-    .post('/')
-    .expect(200)
-    .end((err, res) => {
-      if (err) throw err;
-
-      t.equal(res.body.response_type, 'in_channel');
-      t.ok(facts.includes(res.body.text));
-      t.end();
-    });
+tap.test('All facts are unique', (t) => {
+  const duplicates = findDuplicates(facts);
+  t.deepEqual(duplicates, []);
+  t.end();
 });
