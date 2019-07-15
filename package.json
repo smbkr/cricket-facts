@@ -11,7 +11,7 @@
   "license": "None",
   "dependencies": {
     "koa": "^2.7.0",
-    "koa-router": "^7.4.0"
+    "newrelic": "^5.10.0"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
